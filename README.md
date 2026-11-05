@@ -1,4 +1,4 @@
-# CPF Fake
+# Pacientes Teste
 
 App de barra de menus para macOS que gera um paciente fictício (nome, CPF válido, nascimento, telefone, e-mail e endereço com CEP real) para cadastrar paciente de teste em sistemas de saúde.
 
@@ -16,13 +16,13 @@ O e-mail usa `example.com`, reservado para teste. O telefone é aleatório e pod
 
 ## Instalar
 
-Baixe o `CPF-Fake.zip` da última release, descompacte e arraste para Aplicativos. O app é assinado e notarizado, então abre sem aviso.
+Baixe o `Pacientes-Teste.zip` da última release, descompacte e arraste para Aplicativos. O app é assinado e notarizado, então abre sem aviso.
 
 ## Compilar
 
 - `./build.sh` compila o binário universal (arm64 e x86_64) e instala em `~/Applications`.
-- `./release.sh` faz o mesmo, assina com Developer ID, notariza e gera `CPF-Fake.zip`. Precisa do certificado Developer ID Application no Keychain e de uma credencial `notary` salva com `xcrun notarytool store-credentials`.
+- `./release.sh` faz o mesmo, assina com Developer ID, notariza e gera `Pacientes-Teste.zip`. Precisa do certificado Developer ID Application no Keychain e de uma credencial `notary` salva com `xcrun notarytool store-credentials`.
 
-`--prints <pasta>` salva o painel em PNG, claro e escuro.
+`PacientesTeste --prints <pasta>` salva o painel em PNG, claro e escuro.
 
 Requer macOS 13 ou mais novo.
