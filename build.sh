@@ -4,8 +4,8 @@ cd "$(dirname "$0")"
 APP=~/Applications/"CPF Fake.app"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS"
-swiftc -O -target arm64-apple-macos13 main.swift -o /tmp/cpf-arm
- swiftc -O -target x86_64-apple-macos13 main.swift -o /tmp/cpf-x86
+swiftc -O -target arm64-apple-macos13 main.swift gerador.swift dados.swift enderecos.swift -o /tmp/cpf-arm
+ swiftc -O -target x86_64-apple-macos13 main.swift gerador.swift dados.swift enderecos.swift -o /tmp/cpf-x86
  lipo -create /tmp/cpf-arm /tmp/cpf-x86 -output "$APP/Contents/MacOS/CPFFake"
 cat > "$APP/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
